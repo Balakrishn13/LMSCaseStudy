@@ -7,7 +7,7 @@ import { SearchCourse } from '../models/course.model';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 const coursebaseUrl=environment.coursesbaseUrl;
-const baseUrl=environment.baseUrl;
+const admincourse=environment.AdminCoursebaseUrl;
 
 const headers = new HttpHeaders({
   'Content-Type': 'application/json',
@@ -30,6 +30,6 @@ export class UserService {
   }
   GetCourse(isActive:any):Observable<any>
   {    
-    return this.http.get((coursebaseUrl+'getCourse?isActive='+isActive),httpOptions) .pipe();
+    return this.http.get((admincourse+'getCourse?isActive='+isActive),httpOptions) .pipe();
   }
 }

@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   companybaseUrl: "http://localhost:5000/api/v1.0/lms/company/",
   coursesbaseUrl: "http://localhost:5000/api/v1.0/lms/courses/",
-  baseUrl:"http://localhost:5000/api/v1.0/lms/authenticate"
+  baseUrl:"http://localhost:5000/api/v1.0/lms/authenticate",
+  AdminCoursebaseUrl: "http://localhost:5000/api/v1.0/lms/courses/"
 };
 
 /*

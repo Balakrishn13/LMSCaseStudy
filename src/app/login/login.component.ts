@@ -70,11 +70,11 @@ onsubmit(){
                 localStorage.setItem('Role', user.role ?? "");
                 
                 if (user.role == "Admin") 
-                {
+                {                 
                   this.showalert("Login Success as Admin","success", '/course');
               }
                 else
-                {
+                {                  
                   this.showalert("Login Success as User","success", '/searchcourse');
                 }
         

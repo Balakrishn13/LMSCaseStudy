@@ -10,6 +10,7 @@ import { course } from '../models/course.model';
 const companybaseUrl =environment.companybaseUrl;
 const baseUrl=environment.baseUrl;
 const coursebaseUrl=environment.coursesbaseUrl;
+const admincourse=environment.AdminCoursebaseUrl;
 
 const headers = new HttpHeaders({
   'Content-Type': 'application/json',
@@ -41,18 +42,18 @@ export class AdminService {
   }
   DeleteCourse(Id:any):Observable<any>
   {    
-    return this.http.delete((coursebaseUrl+'delete?courseId='+Id),httpOptions) .pipe();
+    return this.http.delete((admincourse+'delete?courseId='+Id),httpOptions) .pipe();
   }   
   ActiveCourse(Id:any):Observable<any>
   {   
-    return this.http.get((coursebaseUrl+'activate?courseId='+Id),httpOptions) .pipe();
+    return this.http.get((admincourse+'activate?courseId='+Id),httpOptions) .pipe();
   }
   AddCourse(data:course):Observable<course>
   {    
-    return this.http.post((coursebaseUrl+'addcourse'),data,httpOptions) .pipe();
+    return this.http.post((admincourse+'addcourse'),data,httpOptions) .pipe();
   }
   GetCourse(isActive:any):Observable<any>
   {    
-    return this.http.get((coursebaseUrl+'getCourse?isActive='+isActive),httpOptions) .pipe();
+    return this.http.get((admincourse+'getCourse?isActive='+isActive),httpOptions) .pipe();
   }
 }

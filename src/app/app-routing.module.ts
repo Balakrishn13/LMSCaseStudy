@@ -11,9 +11,9 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'course',component:LmscourseComponent,canActivate:[AuthGuard]},
-  {path:'addcourse',component:AddcourseComponent,canActivate:[AuthGuard]},
-  {path:'searchcourse',component:SearchcourseComponent,canActivate:[AuthGuard]}
+  {path:'course',component:LmscourseComponent},
+  {path:'addcourse',component:AddcourseComponent},
+  {path:'searchcourse',component:SearchcourseComponent}
 ];
 
 @NgModule({
